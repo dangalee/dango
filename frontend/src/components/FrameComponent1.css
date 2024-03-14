@@ -1,0 +1,80 @@
+.cartdirectaddingshape-icon {
+  height: 40px;
+  width: 360px;
+  position: relative;
+  border-radius: 12.89px;
+  display: none;
+  max-width: 100%;
+}
+.cart-add-button {
+  width: 200px;
+  position: relative;
+  font-size: 20.6px;
+  font-weight: 100;
+  font-family: Poppins;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.cartdirectaddingbutton,
+.cartdirectaddingbutton-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.cartdirectaddingbutton {
+  cursor: pointer;
+  border: 0;
+  padding: 4px 20px 4.800000000000182px 26px;
+  background-color: #017892;
+  flex: 1;
+  border-radius: 12.89px;
+  justify-content: center;
+  white-space: nowrap;
+}
+.cartdirectaddingbutton:hover {
+  background-color: #269eb8;
+}
+.cartdirectaddingbutton-wrapper {
+  align-self: stretch;
+  justify-content: flex-start;
+  padding: 0 35px;
+}
+.footer-line {
+  height: 1px;
+  width: 431px;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  left: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.46);
+  box-sizing: border-box;
+}
+.footercartcomponent {
+  align-self: stretch;
+  height: 81px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 1px 62px;
+  text-align: center;
+  font-size: 15px;
+  color: #181818;
+  font-family: Poppins;
+}
+.frame-parent5 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 27px;
+  max-width: 100%;
+}

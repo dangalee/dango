@@ -1,0 +1,128 @@
+.socialloginbutton-child {
+  height: 56.7px;
+  width: 375.1px;
+  position: relative;
+  border-radius: 12.89px;
+  background-color: #017892;
+  display: none;
+  max-width: 100%;
+}
+.div13 {
+  height: 31px;
+  position: relative;
+  font-size: 20.6px;
+  font-weight: 100;
+  font-family: Poppins;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  z-index: 1;
+}
+.loginbutton-child,
+.socialloginbutton {
+  border-radius: 12.89px;
+  background-color: #017892;
+  max-width: 100%;
+}
+.socialloginbutton {
+  cursor: pointer;
+  border: 0;
+  padding: 12px 20px 13.700000000000044px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+.loginbutton:hover,
+.signupbutton:hover,
+.socialloginbutton:hover {
+  background-color: #269eb8;
+}
+.loginbutton-child {
+  height: 56.7px;
+  width: 375.1px;
+  position: relative;
+  display: none;
+}
+.div14 {
+  height: 31px;
+  width: 62px;
+  position: relative;
+  font-size: 20.6px;
+  font-weight: 100;
+  font-family: Poppins;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  z-index: 1;
+}
+.loginbutton,
+.signupbutton-child {
+  border-radius: 12.89px;
+  background-color: #017892;
+  max-width: 100%;
+}
+.loginbutton {
+  cursor: pointer;
+  border: 0;
+  padding: 12.900000000000093px 20px 12.799999999999956px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.signupbutton-child {
+  height: 56.7px;
+  width: 375.1px;
+  position: relative;
+  display: none;
+}
+.div15 {
+  height: 31px;
+  position: relative;
+  font-size: 20.6px;
+  font-weight: 100;
+  font-family: Poppins;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  z-index: 1;
+}
+.signupbutton {
+  cursor: pointer;
+  border: 0;
+  padding: 12.900000000000093px 20px 12.799999999999956px;
+  background-color: #017892;
+  align-self: stretch;
+  border-radius: 12.89px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.frame-wrapper,
+.socialloginbutton-parent {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.socialloginbutton-parent {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24.299999999999955px;
+}
+.frame-wrapper {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 1px;
+  box-sizing: border-box;
+}

@@ -1,0 +1,347 @@
+.ice-cream-child {
+  height: 37px;
+  width: 158px;
+  position: relative;
+  border-radius: 12.89px;
+  display: none;
+}
+.div19 {
+  height: 28px;
+  flex: 1;
+  position: relative;
+  font-size: 18px;
+  font-weight: 100;
+  font-family: Poppins;
+  color: #181818;
+  text-align: center;
+  display: inline-block;
+  z-index: 1;
+}
+.ice-cream,
+.ice-cream-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.ice-cream {
+  cursor: pointer;
+  border: 0 solid #017892;
+  padding: 5px 11px 4px 33px;
+  background-color: #e9f1f5;
+  flex: 1;
+  border-radius: 12.89px;
+  white-space: nowrap;
+}
+.ice-cream:hover,
+.vector-parent3:hover,
+.vector-parent4:hover,
+.vector-parent5:hover,
+.vector-parent6:hover {
+  background-color: #cfd9db;
+  border: 1px solid #269eb8;
+  box-sizing: border-box;
+}
+.ice-cream-wrapper {
+  width: 160px;
+  padding: 0 1px;
+  box-sizing: border-box;
+}
+.frame-child13 {
+  height: 37px;
+  width: 160px;
+  position: relative;
+  border-radius: 12.89px;
+  display: none;
+}
+.div20 {
+  width: 129px;
+  position: relative;
+  font-weight: 100;
+  display: inline-block;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding-left: 20px;
+  z-index: 1;
+}
+.frame-wrapper1,
+.vector-container {
+  display: flex;
+  align-items: flex-start;
+}
+.vector-container {
+  align-self: stretch;
+  border-radius: 12.89px;
+  background-color: #e9f1f5;
+  border: 0 solid #017892;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 6px 0 3px;
+}
+.frame-wrapper1 {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1px 0 0;
+}
+.frame-child14 {
+  height: 37px;
+  width: 87px;
+  position: relative;
+  border-radius: 12.89px;
+  display: none;
+}
+.div21 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  font-weight: 100;
+  z-index: 1;
+}
+.added-item-inner,
+.frame-parent2,
+.vector-parent1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.vector-parent1 {
+  height: 37px;
+  width: 87px;
+  border-radius: 12.89px;
+  background-color: #e9f1f5;
+  border: 0 solid #017892;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  padding: 5px 2px 12px 24px;
+}
+.added-item-inner,
+.frame-parent2 {
+  justify-content: flex-start;
+}
+.frame-parent2 {
+  flex: 1;
+  gap: 12px;
+}
+.added-item-inner {
+  align-self: stretch;
+  padding: 0 3px;
+}
+.frame-child15 {
+  height: 37px;
+  width: 127px;
+  position: relative;
+  border-radius: 12.89px;
+  display: none;
+}
+.div22 {
+  align-self: stretch;
+  width: 61px;
+  position: relative;
+  font-weight: 100;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.frame-child16,
+.vector-parent2 {
+  height: 37px;
+  border-radius: 12.89px;
+}
+.vector-parent2 {
+  flex: 1;
+  background-color: #e9f1f5;
+  border: 0 solid #017892;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 6px 12px 11px;
+}
+.frame-child16 {
+  width: 127px;
+  position: relative;
+  display: none;
+}
+.div23 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  font-size: 18px;
+  font-weight: 100;
+  font-family: Poppins;
+  color: #181818;
+  text-align: center;
+  z-index: 1;
+}
+.vector-parent3 {
+  cursor: pointer;
+  border: 0 solid #017892;
+  padding: 6px 10px 11px 39px;
+  background-color: #e9f1f5;
+  height: 37px;
+  flex: 0.7573;
+  border-radius: 12.89px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.added-item,
+.frame-parent3 {
+  display: flex;
+  justify-content: flex-start;
+}
+.frame-parent3 {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 11px;
+}
+.added-item {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+  min-width: 172px;
+}
+.frame-child17 {
+  height: 37px;
+  width: 110px;
+  position: relative;
+  border-radius: 12.89px;
+  display: none;
+}
+.div24 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  font-size: 18px;
+  font-weight: 100;
+  font-family: Poppins;
+  color: #181818;
+  text-align: center;
+  z-index: 1;
+}
+.frame-child18,
+.vector-parent4 {
+  height: 37px;
+  border-radius: 12.89px;
+}
+.vector-parent4 {
+  cursor: pointer;
+  border: 0 solid #017892;
+  padding: 5px 7px 12px 39px;
+  background-color: #e9f1f5;
+  width: 110px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.frame-child18 {
+  width: 87px;
+  position: relative;
+  display: none;
+}
+.div25 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  font-size: 18px;
+  font-weight: 100;
+  font-family: Poppins;
+  color: #181818;
+  text-align: center;
+  z-index: 1;
+}
+.frame-child19,
+.vector-parent5 {
+  height: 37px;
+  border-radius: 12.89px;
+}
+.vector-parent5 {
+  cursor: pointer;
+  border: 0 solid #017892;
+  padding: 6px 9px 11px 36px;
+  background-color: #e9f1f5;
+  width: 87px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.frame-child19 {
+  width: 127px;
+  position: relative;
+  display: none;
+}
+.div26 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  font-size: 18px;
+  font-weight: 100;
+  font-family: Poppins;
+  color: #181818;
+  text-align: center;
+  z-index: 1;
+}
+.vector-parent6 {
+  cursor: pointer;
+  border: 0 solid #017892;
+  padding: 6px 12px 11px 37px;
+  background-color: #e9f1f5;
+  align-self: stretch;
+  height: 37px;
+  border-radius: 12.89px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+.add-to-cart-button,
+.background-frame,
+.frame-parent4 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame-parent4 {
+  width: 127px;
+  flex-direction: column;
+  gap: 14.5px;
+  min-width: 127px;
+}
+.add-to-cart-button,
+.background-frame {
+  flex-direction: row;
+  max-width: 100%;
+}
+.add-to-cart-button {
+  flex: 1;
+  gap: 12px;
+}
+.background-frame {
+  align-self: stretch;
+  padding: 0 12px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 18px;
+  color: #181818;
+  font-family: Poppins;
+}
+@media screen and (max-width: 450px) {
+  .frame-parent4 {
+    flex: 1;
+  }
+  .add-to-cart-button {
+    flex-wrap: wrap;
+  }
+}

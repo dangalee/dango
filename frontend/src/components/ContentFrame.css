@@ -1,0 +1,210 @@
+.pork-jpn-1-icon {
+  height: 24px;
+  width: 45px;
+  position: relative;
+  object-fit: cover;
+  z-index: 1;
+}
+.rabbit {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 0 3px;
+}
+.slicecheese-jpn-1-icon {
+  width: 44px;
+  height: 38px;
+  position: relative;
+  object-fit: cover;
+  z-index: 1;
+}
+.dismiss-circle,
+.vegetable-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.vegetable-frame {
+  gap: 42px;
+}
+.dismiss-circle {
+  padding: 1px 0 0;
+}
+.rectangle-icon {
+  height: 60px;
+  width: 407px;
+  position: absolute;
+  margin: 0 !important;
+  top: -23px;
+  right: -167.8px;
+  border-radius: 13px;
+}
+.div16 {
+  position: relative;
+  font-weight: 100;
+  white-space: nowrap;
+  z-index: 1;
+}
+.broccoli,
+.vector-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.vector-parent {
+  height: 18.6px;
+  position: relative;
+}
+.broccoli {
+  height: 28px;
+  padding: 0 25px 0 21px;
+  box-sizing: border-box;
+}
+.frame-child12 {
+  height: 60px;
+  width: 407px;
+  position: absolute;
+  margin: 0 !important;
+  top: -22.9px;
+  left: -146px;
+  border-radius: 13px;
+}
+.div17 {
+  position: relative;
+  font-weight: 100;
+  white-space: nowrap;
+  z-index: 1;
+}
+.vector-group,
+.yangpa {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.vector-group {
+  height: 18.7px;
+  flex-direction: row;
+  position: relative;
+}
+.yangpa {
+  height: 101px;
+  flex-direction: column;
+  padding: 0 27px 0 0;
+  box-sizing: border-box;
+  gap: 45px;
+}
+.dismiss-circle-undefined-g,
+.dismiss-circle-undefined-g1 {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.cart-page-footer,
+.footer-cart-component {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.cart-page-footer {
+  gap: 49px;
+}
+.footer-cart-component {
+  padding: 1px 0 0;
+}
+.slice-cheese-jpn {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.fridge-icon-child {
+  height: 60px;
+  width: 407px;
+  position: absolute;
+  margin: 0 !important;
+  top: -21px;
+  left: -191.4px;
+  border-radius: 13px;
+}
+.div18 {
+  width: 45px;
+  position: relative;
+  font-weight: 100;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.fridge-icon {
+  height: 18.6px;
+  width: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+.dismiss-circle-undefined-g2 {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.cart-header,
+.cart-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 3px 0 0;
+}
+.cart-icon {
+  width: 202px;
+  height: 28px;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 9px 0 0;
+  box-sizing: border-box;
+  gap: 20px;
+}
+.content-frame,
+.pork-jpn {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.pork-jpn {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 40px;
+}
+.content-frame {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 27px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 20.6px;
+  color: #181818;
+  font-family: Poppins;
+}
+@media screen and (max-width: 450px) {
+  .slice-cheese-jpn {
+    flex-wrap: wrap;
+  }
+  .pork-jpn {
+    gap: 20px 40px;
+  }
+}

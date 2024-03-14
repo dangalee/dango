@@ -1,0 +1,359 @@
+.frame-child20 {
+  align-self: stretch;
+  width: 381px;
+  position: relative;
+  background-color: #86868b;
+  display: none;
+  max-width: 100%;
+}
+.third-inner-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 169px;
+  height: 438.9px;
+  z-index: 1;
+}
+.fourth-inner-frame-child,
+.rectangle-shapes-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.fourth-inner-frame-child {
+  background-color: rgba(88, 89, 91, 0.75);
+}
+.rectangle-shapes-child {
+  background-color: #312c2c;
+}
+.third-inner-rectangle,
+.vector-guides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 85.9px;
+  height: 28.7px;
+  z-index: 4;
+}
+.vector-guides {
+  top: 5.7px;
+  left: 17.2px;
+  background-color: #6d6e71;
+  width: 22.9px;
+  height: 17.2px;
+  z-index: 5;
+}
+.second-inner-rectangle,
+.second-inner-rectangle1,
+.second-inner-rectangle2 {
+  position: absolute;
+  top: 14.4px;
+  left: 43px;
+  background-color: #428e6a;
+  width: 8.6px;
+  height: 5.7px;
+  z-index: 5;
+}
+.second-inner-rectangle1,
+.second-inner-rectangle2 {
+  top: 8.6px;
+  left: 54.4px;
+}
+.second-inner-rectangle2 {
+  top: 20.1px;
+}
+.first-inner-rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 85.9px;
+  height: 28.7px;
+}
+.last-rectangle,
+.three-grouped-rectangles {
+  position: absolute;
+  top: 34.4px;
+  left: 17.2px;
+  background-color: #a7a9ac;
+  width: 45.8px;
+  height: 11.5px;
+  z-index: 4;
+}
+.last-rectangle {
+  top: 94.7px;
+  left: 0;
+  width: 85.9px;
+  height: 5.7px;
+}
+.three-grouped-rectangles1,
+.three-grouped-rectangles2 {
+  position: absolute;
+  top: 45.9px;
+  left: 25.8px;
+  background-color: #a7a9ac;
+  width: 5.7px;
+  height: 11.5px;
+  z-index: 5;
+}
+.three-grouped-rectangles2 {
+  left: 48.7px;
+}
+.rectangle-shapes {
+  position: absolute;
+  width: calc(100% - 28.7px);
+  top: 8.6px;
+  right: 14.4px;
+  left: 14.3px;
+  background-color: #312c2c;
+  height: 100.4px;
+  z-index: 3;
+}
+.fourth-inner-frame {
+  position: absolute;
+  top: 106.1px;
+  left: 34.4px;
+  background-color: rgba(88, 89, 91, 0.75);
+  width: 114.6px;
+  height: 120.5px;
+  z-index: 2;
+}
+.vector-line {
+  height: 438.9px;
+  flex: 1;
+  position: relative;
+}
+.second-inner-frame {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 110px;
+}
+.first-inner-frame {
+  width: 11.5px;
+  flex: 1;
+  position: relative;
+  background-color: #bbbec0;
+  z-index: 1;
+}
+.rectangle-frames {
+  height: 487.7px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 5.7000000000000455px 0 0;
+  box-sizing: border-box;
+}
+.rectangle-frames-child {
+  width: 8.6px;
+  flex: 1;
+  position: relative;
+  background-color: #232020;
+  z-index: 1;
+}
+.rectangle-frames1 {
+  height: 487.7px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 6px 0 0;
+  box-sizing: border-box;
+}
+.footer-fridge-component {
+  height: 487.7px;
+  width: 11.5px;
+  position: relative;
+  background-color: #bbbec0;
+  z-index: 1;
+}
+.logo-group-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 169px;
+  height: 487.7px;
+  z-index: 1;
+}
+.mypage-icon-frame {
+  position: relative;
+  letter-spacing: -0.04em;
+  z-index: 3;
+}
+.fridge-icon-frame {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 19px 0 20px;
+}
+.fridgealerttrans {
+  width: 123px;
+  height: 156px;
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 251, 251, 0.13),
+    rgba(108, 200, 198, 0.13) 46%,
+    rgba(69, 63, 63, 0.13)
+  );
+  display: none;
+}
+.ingredientimg-icon {
+  height: 35.7px;
+  width: 34px;
+  position: absolute;
+  margin: 0 !important;
+  bottom: -18.7px;
+  left: -14px;
+  object-fit: cover;
+  z-index: 3;
+}
+.alertimerrounding {
+  height: 13px;
+  width: 30px;
+  position: relative;
+  border-radius: 9.33px;
+  background-color: rgba(229, 33, 45, 0.8);
+  display: none;
+}
+.footer-lines-container {
+  position: relative;
+  letter-spacing: -0.04em;
+  z-index: 1;
+}
+.alerttimer {
+  border-radius: 9.33px;
+  background-color: rgba(229, 33, 45, 0.8);
+  padding: 0 1px 1px 2px;
+  z-index: 4;
+}
+.alerttimer,
+.cart-icon1,
+.fridge-icon2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.fridge-icon2 {
+  position: relative;
+}
+.cart-icon1 {
+  padding: 0 6px;
+}
+.ingredientname {
+  position: relative;
+  letter-spacing: -0.04em;
+  font-family: "Noto Sans KR";
+  color: #cce3ef;
+  z-index: 4;
+}
+.cart-icon-frame,
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.footer-content {
+  flex: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 251, 251, 0.13),
+    rgba(108, 200, 198, 0.13) 46%,
+    rgba(69, 63, 63, 0.13)
+  );
+  padding: 9px 60px 9px 20.299999999999955px;
+  gap: 15px;
+  font-size: 10px;
+  color: #dbd8df;
+  font-family: Montserrat;
+}
+.cart-icon-frame {
+  position: absolute;
+  top: 54.5px;
+  left: 8.5px;
+  background: linear-gradient(180deg, #6cc8c6, #6cc8c6 50%, #6840c0);
+  height: 215.5px;
+  overflow: hidden;
+  padding: 7.5px 11.099999999999907px 10px 11.200000000000044px;
+  box-sizing: border-box;
+  gap: 3px;
+  z-index: 2;
+}
+.parent-frame2 {
+  height: 487.7px;
+  flex: 1;
+  position: relative;
+  min-width: 110px;
+}
+.cart-frame3,
+.rectangle-parent5 {
+  align-self: stretch;
+  max-width: 100%;
+}
+.rectangle-parent5 {
+  background-color: #86868b;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+  row-gap: 20px;
+}
+.cart-frame3 {
+  flex: 1;
+  position: relative;
+  background-color: #414042;
+}
+.fridge-exterior-page-footer {
+  align-self: stretch;
+  height: 14.3px;
+  flex-direction: row;
+  padding: 0 12px 0 11.5px;
+  box-sizing: border-box;
+}
+.fridge-exterior-header,
+.fridge-exterior-page-footer,
+.main-frame2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.main-frame2 {
+  flex: 1;
+  flex-direction: column;
+}
+.fridge-exterior-header {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 24px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 28.7px;
+  color: #fff;
+  font-family: "Myanmar Khyay";
+}
+@media screen and (max-width: 353px) {
+  .second-inner-frame {
+    flex: 1;
+  }
+  .footer-fridge-component {
+    width: 100%;
+    height: 11.5px;
+  }
+  .parent-frame2 {
+    flex: 1;
+  }
+  .rectangle-parent5 {
+    flex-wrap: wrap;
+  }
+}

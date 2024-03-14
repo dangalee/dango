@@ -1,0 +1,108 @@
+.vectorarrow-icon {
+  width: 10px;
+  height: 18px;
+  position: relative;
+}
+.inner-framepassword {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 13px;
+}
+.b {
+  height: 45px;
+  flex: 1;
+  position: relative;
+  font-size: 25px;
+  letter-spacing: -0.04em;
+  display: flex;
+  font-family: 'Noto Sans KR';
+  color: #181818;
+  text-align: left;
+  align-items: center;
+}
+.inner-frameemail,
+.main-frame1,
+.signup-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.inner-frameemail {
+  width: 162px;
+  align-items: flex-end;
+  gap: 14px;
+}
+.main-frame1,
+.signup-frame {
+  align-self: stretch;
+  align-items: flex-start;
+  padding: 0 0 15.700000000000044px;
+}
+.main-frame1 {
+  height: 360.3px;
+  flex-direction: column;
+  padding: 0 0 0 19px;
+  box-sizing: border-box;
+  gap: 16.59999999999991px;
+}
+.frame-child10 {
+  height: 57px;
+  width: 360px;
+  position: relative;
+  border-radius: 12.89px;
+  background-color: rgba(1, 120, 146, 0.52);
+  display: none;
+  max-width: 100%;
+}
+.div10 {
+  width: 100px;
+  position: relative;
+  font-size: 20.6px;
+  font-weight: 100;
+  font-family: Poppins;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.group-button,
+.signuppage {
+  display: flex;
+  box-sizing: border-box;
+}
+.group-button {
+  cursor: pointer;
+  border: 0;
+  padding: 12.099999999999907px 20px 13.700000000000044px;
+  background-color: rgba(1, 120, 146, 0.52);
+  width: 360px;
+  border-radius: 12.89px;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 100%;
+}
+.group-button:hover {
+  background-color: rgba(38, 158, 184, 0.52);
+}
+.signuppage {
+  margin: 0;
+  width: 100%;
+  position: relative;
+  border-radius: 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(202, 249, 249, 0.42),
+    rgba(203, 149, 182, 0.21)
+  );
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 134px 35px 214px 16px;
+  gap: 53px;
+  letter-spacing: normal;
+}

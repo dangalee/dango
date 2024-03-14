@@ -1,0 +1,35 @@
+.b1 {
+  flex: 1;
+  position: relative;
+  letter-spacing: -0.04em;
+}
+.input-group {
+  width: 145px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+.inputshape3 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.button-frame {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 14.100000000000136px;
+  gap: 10.700000000000044px;
+  text-align: left;
+  font-size: 20px;
+  color: #181818;
+  font-family: "Noto Sans KR";
+}
