@@ -8,6 +8,7 @@ export default {
         aggroS: ['SBAggroL'],
         aggroM: ['SBAggroM'],
         aggroB: ['SBAggroB'],
+
       },
     },
   },
