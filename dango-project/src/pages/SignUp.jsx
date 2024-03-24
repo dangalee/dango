@@ -10,14 +10,13 @@ export default function SignUp() {
   const navigate = useNavigate();
 
   const [nickname, setNickname] = useState('');
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSignUp = async () => {
-    console.log('닉네임', nickname)
 
     try {
-      const response = await signUpUser({nickname, email, password});
+      const response = await signUpUser({nickname, username, password});
       console.log('로그인 성공', response)
       navigateConnectFridge();
     } catch (error) {
@@ -43,7 +42,7 @@ export default function SignUp() {
           <button onClick={navigateLogin}>&lt;</button> 회원가입{' '}
         </div>
         {/* 형식 form - requestbody임으로 submit 불가 */}
-        <form className='w-full ml-[14vw]'>
+        <div className='w-full ml-[14vw]'>
         <div className='m-4 w-3/4 flex justify-center flex-col mb-10'>
             <div>닉네임</div>
             <input
@@ -58,8 +57,8 @@ export default function SignUp() {
             <input
               placeholder='ssafy@gmail.com'
               className='rounded-lg p-3 w-full'
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
           </div>
           <div className='m-4 w-3/4 flex justify-center flex-col mb-10'>
@@ -72,7 +71,7 @@ export default function SignUp() {
             />
           </div>
           <button onClick={handleSignUp} className='long-thick-button'> 가입하기 </button>
-        </form>
+        </div>
       </div>
     </>
   );
