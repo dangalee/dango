@@ -11,16 +11,20 @@ export default function AlertModalSVG() {
         xmlns='http://www.w3.org/2000/svg'
       >
         <rect
-          width='145.349'
-          height='215.509'
+          width='145'
+          height='190'
           transform='translate(0.479858 0.502869)'
           fill='url(#paint0_linear_188_447)'
         />
+        <text x='40' y='20' fill='white' fontFamily='SBAggroM' fontSize={10}>
+          오래된 식재료
+        </text>
+
         <rect
-          x='11.6542'
-          y='50.0115'
+          x='11'
+          y='30'
           width='123'
-          height='156'
+          height='150'
           fill='url(#paint1_linear_188_447)'
           fill-opacity='0.13'
         />

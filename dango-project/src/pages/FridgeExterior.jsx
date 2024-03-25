@@ -5,11 +5,14 @@ import Footer from '../components/Footer';
 import FridgeSVG from '../components/FridgeSVG';
 import { useState } from 'react';
 import AlertModal from '../components/Fridge-Exterior/AlertModal';
+import { isModalOpenState } from '../recoil/atoms/atom';
+import { useRecoilState } from 'recoil';
 
 function FridgeExterior() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useRecoilState(isModalOpenState);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -42,20 +45,22 @@ function FridgeExterior() {
   const currentTime = getCurrentTime();
 
   return (
-    <>
+    <div>
       <Header text={'예은이의 냉장고'} />
-      <div className='relative h-screen'>
-        <div className='absolute  left-1/2 transform -translate-x-1/2 translate-y-1/2'>
-          <FridgeSVG
-            time={currentTime}
-            onAlarmClick={handleAlarmClick}
-            onFridgeClick={goToInside}
-          />
+      <div>
+        <div className='relative '>
+          <div className='absolute  left-1/2 transform -translate-x-1/2 translate-y-1/2'>
+            <FridgeSVG
+              time={currentTime}
+              onAlarmClick={handleAlarmClick}
+              onFridgeClick={goToInside}
+            />
+          </div>
+          <AlertModal isOpen={isModalOpen} closeModal={closeModal} />
         </div>
-        <AlertModal isOpen={isModalOpen} closeModal={closeModal} />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

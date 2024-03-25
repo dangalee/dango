@@ -125,7 +125,7 @@ export default function FridgeSVG({ time, onFridgeClick, onAlarmClick }) {
           />
         </Link>
         <Link onClick={handleAlarmClick}>
-           <rect
+          <rect
             width='145.349'
             height='215.509'
             transform='translate(220.48 54.5029)'

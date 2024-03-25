@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-// import CartFilledIcon from '../assets/imgs/cartFilledIcon.svg';
+import { useRecoilState } from 'recoil';
 import FridgeIcon from '../assets/imgs/fridgeIcon.svg';
 import '../styles/Footer.css';
 import { BsPerson, BsFillPersonFill } from 'react-icons/bs';
 import { IoFileTrayStackedOutline as TrayEmpty } from 'react-icons/io5';
 import { IoFileTrayStacked as TrayFilled } from 'react-icons/io5';
+import { isModalOpenState } from '../recoil/atoms/atom';
 
 export default function Footer() {
   const navigate = useNavigate();
   const location = useLocation();
   const [cartIcon, setCartIcon] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useRecoilState(isModalOpenState);
 
   const handleCartIcon = () => {
     setCartIcon(!cartIcon);
@@ -43,10 +45,19 @@ export default function Footer() {
 
           <div className='font-aggroS'>신선칸</div>
         </div>
-        <div className='flex flex-col items-center'>
+        <div className='flex flex-col items-center -z-10 relative'>
           <div onClick={goToExterior}>
-            <img src={FridgeIcon} style={{ marginTop: '-5px' }} />
-            <div className='font-aggroS' style={{ marginTop: '-5px' }}>
+            <img
+              src={FridgeIcon}
+              style={{
+                marginTop: '-5px',
+                opacity: isModalOpen ? 0.5 : 1,
+              }}
+            />
+            <div
+              className='font-aggroS'
+              style={{ marginTop: '-5px', opacity: isModalOpen ? 0.5 : 1 }}
+            >
               {' '}
               홈
             </div>
