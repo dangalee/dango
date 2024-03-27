@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { useRecoilState } from 'recoil';
+import { useRecoilValue } from 'recoil';
 import FridgeIcon from '../assets/imgs/fridgeIcon.svg';
 import '../styles/Footer.css';
 import { BsPerson, BsFillPersonFill } from 'react-icons/bs';
@@ -12,7 +12,7 @@ export default function Footer() {
   const navigate = useNavigate();
   const location = useLocation();
   const [cartIcon, setCartIcon] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useRecoilState(isModalOpenState);
+  const isModalOpen = useRecoilValue(isModalOpenState);
 
   const handleCartIcon = () => {
     setCartIcon(!cartIcon);
@@ -54,10 +54,7 @@ export default function Footer() {
                 opacity: isModalOpen ? 0.5 : 1,
               }}
             />
-            <div
-              className='font-aggroS'
-              style={{ marginTop: '-5px', opacity: isModalOpen ? 0.5 : 1 }}
-            >
+            <div className='font-aggroS' style={{ marginTop: '-5px' }}>
               {' '}
               홈
             </div>

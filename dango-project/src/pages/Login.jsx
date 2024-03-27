@@ -4,19 +4,31 @@ import '../styles/Common.css';
 import { useNavigate } from 'react-router-dom';
 import { RiKakaoTalkFill } from 'react-icons/ri';
 import { loginUser } from '../api/Api';
+import { useRecoilState } from 'recoil';
+import { userState } from '../recoil/atoms/userState';
 
 export default function Login() {
   const navigate = useNavigate();
 
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
+  const [user, setUser] = useRecoilState(userState);
 
   const handleLogin = async () => {
     try {
       const response = await loginUser({ username, password });
       console.log('로그인 성공', response);
+      setUser(data.data);
+      console.log(setUser(data.data));
     } catch (error) {
       console.log('로그인 실패', error);
+    }
+  };
+
+  // Enter 키를 누를 때 handleLogin 함수 호출
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleLogin();
     }
   };
 
@@ -41,6 +53,7 @@ export default function Login() {
                 className='rounded-lg p-3 w-full'
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
+                onKeyDown={handleKeyDown}
               />
             </div>
             <div className='m-4 w-3/4 flex justify-center flex-col'>
@@ -50,6 +63,7 @@ export default function Login() {
                 className='rounded-lg p-3 w-full'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                onKeyDown={handleKeyDown}
               />
             </div>
             <div className='w-3/4 flex justify-center'>
