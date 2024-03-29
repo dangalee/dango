@@ -23,7 +23,6 @@ const [isModalOpen, setIsModalOpen] = useState(false);
     } catch (error) {
       alert("추가에 실패했습니다.")
       console.log('식재료 추가 실패', error);
-
     }
   }
   
