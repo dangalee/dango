@@ -13,20 +13,17 @@ function FridgeExterior() {
   useEffect(() => {
     getRefrigeratorInfo();
   }, []);
-  const goToExterior = () => {
-    navigate('/fridge-exterior');
-  };
 
   const getRefrigeratorInfo = async () => {
 
     try {
       const response = await getRefrigerator();
       console.log('냉장고 조회 성공', response)
-      goToExterior();
+      
       
     } catch (error) {
       console.log('냉장고 조회 실패', error);
-      goToExterior();
+      
 
     }
   }

@@ -3,18 +3,18 @@ import {getNameGroceryInfo} from "../../api/Api";
 
 function SearchButton({ searchTerm }) {
 
-  const pageInfo = {
-    page: 0,
-    size: 10
-  };
+  // const pageInfo = {
+  //   page: 0,
+  //   size: 10
+  // };
 
   const handleSearch = async () => {
-    try {
-      const response = await getNameGroceryInfo({searchTerm, pageInfo});
-      console.log('이름에 따른 검색 성공', response)
-    } catch (error) {
-      console.log('이름에 따른 검색 실패', error);
-    }
+    // try {
+    //   const response = await getNameGroceryInfo({searchTerm, pageInfo});
+    //   console.log('이름에 따른 검색 성공', response)
+    // } catch (error) {
+    //   console.log('이름에 따른 검색 실패', error);
+    // }
   }
 
     return (
