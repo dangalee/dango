@@ -37,17 +37,17 @@ export const loginUser = async (userLoginRequest) => {
     const response = await api.post('/users/login', userLoginRequest);
 
     console.log(response);
-    // const nickname = response.data.data.nickname;
-    // const accessToken = response.data.data.accessToken;
-    // const refreshToken = response.data.data.refreshToken;
-    // const user = {
-    //   nickname: nickname,
-    //   accessToken: accessToken,
-    //   refreshToken: refreshToken,
-    // }
+    const nickname = response.data.data.nickname;
+    const accessToken = response.data.data.accessToken;
+    const refreshToken = response.data.data.refreshToken;
+    const user = {
+      nickname: nickname,
+      accessToken: accessToken,
+      refreshToken: refreshToken,
+    }
 
-    const { nickname, accessToken, refreshToken } = response.data.data;
-    setUser({ nickname, accessToken0, refreshToken });
+    // const { nickname, accessToken, refreshToken } = response.data.data;
+    // setUser({ nickname, accessToken, refreshToken });
     localStorage.setItem('loginUser', JSON.stringify(user));
     JSON.parse(localStorage.getItem('loginUser'));
     // updateLoginUser(nickname, accessToken, refreshToken);
