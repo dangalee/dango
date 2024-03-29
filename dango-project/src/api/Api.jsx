@@ -132,15 +132,43 @@ export const getGroceryDetail = async (groceryId) => {
 }
 
 
-export const addGrocery = async () => {
+export const addGrocery = async (addRequest) => {
   try {
-    const response = await api.post(`/log`);
+    const response = await api.post(`/log`, addRequest);
     return response.data;
   } catch (error) {
     console.error("식재료 정보 추가하기 실패:", error);
     throw error;
   }
 }
+
+export const getAllGroceryInfo = async (pageInfo) => {
+  try {
+    const response = await api.get(`/ingredient/search`, pageInfo);
+    return response.data;
+  } catch (error) {
+    console.error("전체 식재료 정보 불러오기 실패")
+  }
+}
+
+export const getTypeGroceryInfo = async (keyword, pageInfo) => {
+  try {
+    const response = await api.get(`/ingredient/search/type/${keyword}`, pageInfo);
+    return response.data;
+  } catch (error) {
+    console.error("전체 식재료 정보 불러오기 실패")
+  }
+}
+
+export const getNameGroceryInfo = async (keyword, pageInfo) => {
+  try {
+    const response = await api.get(`/ingredient/search/name/${keyword}`, pageInfo);
+    return response.data;
+  } catch (error) {
+    console.error("전체 식재료 정보 불러오기 실패")
+  }
+}
+
 
 
 

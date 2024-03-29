@@ -1,14 +1,30 @@
 import React, { useState } from 'react';
+import {getTypeGroceryInfo} from '../../api/Api'
 
 function DropDownComponent() {
     const [isOpenDropDown, setIsOpenDropDown] = useState(false);
     const [selectedOption, setSelectedOption] = useState('필터');
 
-    const optDropDown = (option) => {
+    const optDropDown = async (option) => {
         console.log(`${option}`);
         setIsOpenDropDown(false);
         setSelectedOption(option);
-        
+        if (selectedOption === "과일류") {
+          try {
+            const response = await getTypeGroceryInfo(1);
+            console.log("타입에 따른 검색 성공", response.data);
+          } catch (error) {
+            console.log('조회 실패', error);
+          }
+        }
+        else if (selectedOption === "야채류"){
+          try {
+            const response = await getTypeGroceryInfo(1);
+            console.log("타입에 따른 검색 성공", response.data);
+          } catch (error) {
+            console.log('조회 실패', error);
+          }          
+        }
     }
 
     return (

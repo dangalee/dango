@@ -16,7 +16,11 @@ function FridegeInside() {
     getRefrigeratorDetailInfo();
   }, []);
 
-  
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = (term) => {
+    setSearchTerm(term);
+  };
 
   const getRefrigeratorDetailInfo = async () => {
 
@@ -37,8 +41,8 @@ function FridegeInside() {
       <div className='flex-col ml-[9.5vw]'>
         <div className="flex mb-[1vh] mt-[1vh]">
         <DropDownComponent/>
-        <SearchComponent/>
-        <SearchButton/>
+        <SearchComponent onSearch={handleSearch} searchTerm={searchTerm}/>
+        <SearchButton searchTerm= {searchTerm}/>
         </div>
         <div className="mb-[2vh]">
           <FridgeFrame buttonText="삭제"/>

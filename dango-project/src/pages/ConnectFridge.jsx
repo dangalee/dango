@@ -15,8 +15,9 @@ export default function ConnectFridge() {
       console.log('냉장고 연결 성공', response)
       navigateFridgeExterior();
     } catch (error) {
-      alert('냉장고 연결에 실패했습니다.')
+      // alert('냉장고 연결에 실패했습니다.')
       console.log('냉장고 연결 실패', error);
+      navigateFridgeExterior();
     }
   }
 
