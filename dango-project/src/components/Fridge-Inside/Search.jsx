@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 
-function SearchInput({ onSearch }) {
-  const [searchTerm, setSearchTerm] = useState('');
+function SearchInput({ onSearch, searchTerm }) {
 
   const handleChange = (event) => {
-    setSearchTerm(event.target.value);
+    onSearch(event.target.value); 
   };
+  //부모 컴포넌트의 searchTerm usestate 값 업데이트
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSearch(searchTerm);
   };
 
   return (

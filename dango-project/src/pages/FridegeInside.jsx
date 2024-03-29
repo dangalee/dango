@@ -17,8 +17,13 @@ function FridegeInside() {
     getRefrigerator();
   }, []);
 
-  const { nickname } = useRecoilValue(loginUserState);
-  const { refreshToken } = useRecoilValue(loginUserState);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = (term) => {
+    setSearchTerm(term);
+  };
+
+  const getRefrigeratorDetailInfo = async () => {
 
   const getRefrigerator = async () => {
     try {
@@ -37,10 +42,10 @@ function FridegeInside() {
       <Header text={`${nickname}예은이의 냉장고`} />
 
       <div className='flex-col ml-[9.5vw]'>
-        <div className='flex mb-[1vh] mt-[1vh]'>
-          <DropDownComponent />
-          <SearchComponent />
-          <SearchButton />
+        <div className="flex mb-[1vh] mt-[1vh]">
+        <DropDownComponent/>
+        <SearchComponent onSearch={handleSearch} searchTerm={searchTerm}/>
+        <SearchButton searchTerm= {searchTerm}/>
         </div>
 
         <div className='mb-[2vh]'>

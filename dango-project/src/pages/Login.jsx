@@ -19,13 +19,19 @@ export default function Login() {
     }
   }, []);
 
+  const goToExterior = () => {
+    navigate('/fridge-exterior');
+  };
+
   const handleLogin = async () => {
     try {
       const response = await loginUser({ username, password });
       console.log('로그인 성공', response);
       navigate('/fridge-exterior');
+      
     } catch (error) {
       console.log('로그인 실패', error);
+      
     }
   };
 
