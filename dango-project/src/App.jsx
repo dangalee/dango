@@ -6,8 +6,9 @@ import TokenRefresher from './components/TokenRefresher';
 export default function App() {
   return (
     <>
-      {/* <TokenRefresher /> */}
-      <RouterProvider router={routes}></RouterProvider>
+      <RouterProvider router={routes}>
+        <TokenRefresher />
+      </RouterProvider>
     </>
   );
 }

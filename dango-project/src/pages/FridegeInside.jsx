@@ -7,26 +7,34 @@ import AddButton from '../components/Fridge-Inside/AddButton';
 import DropDownComponent from '../components/Fridge-Inside/DropDown';
 import SearchComponent from '../components/Fridge-Inside/Search';
 import SearchButton from '../components/Fridge-Inside/SearchButton';
-import { getRefrigeratorDetail } from '../api/Api';
+import { getRefrigeratorIngred } from '../api/Api';
 import { useEffect, useState } from 'react';
+import { useRecoilValue } from 'recoil';
+import { loginUserState } from '../recoil/atoms/userState';
 
 function FridegeInside() {
   useEffect(() => {
-    getRefrigeratorDetailInfo();
+    getRefrigerator();
   }, []);
 
-  const getRefrigeratorDetailInfo = async () => {
+  const { nickname } = useRecoilValue(loginUserState);
+  const { refreshToken } = useRecoilValue(loginUserState);
+
+  const getRefrigerator = async () => {
     try {
-      const response = await getRefrigeratorDetail();
+      const response = await getRefrigeratorIngred(nickname);
       console.log('냉장고 조회 성공', response);
+      console.log({ refreshToken });
     } catch (error) {
       console.log('냉장고 조회 실패', error);
+      console.log({ refreshToken });
+
     }
   };
 
   return (
     <>
-      <Header text={'예은이의 냉장고'} />
+      <Header text={`${nickname}예은이의 냉장고`} />
 
       <div className='flex-col ml-[9.5vw]'>
         <div className='flex mb-[1vh] mt-[1vh]'>
