@@ -14,9 +14,10 @@ const api = axios.create({
 // 요청 인터셉터
 api.interceptors.request.use(
   function (config) {
-    if (localStorage.getItem('accessToken')) {
-      config.headers.Authorization =
-        'Bearer ' + localStorage.getItem('accessToken');
+    const item = localStorage.getItem('loginUser');
+
+    if (item) {
+      config.headers.Authorization = 'Bearer ' + JSON.parse(item).accessToken;
     }
     // 요청 성공 직전 호출됩니다.
     // console.log(config);
@@ -40,11 +41,13 @@ export const loginUser = async (userLoginRequest) => {
     const nickname = response.data.data.nickname;
     const accessToken = response.data.data.accessToken;
     const refreshToken = response.data.data.refreshToken;
+    const refrigeratorNickname = response.data.data.refrigeratorNickname;
     const user = {
       nickname: nickname,
       accessToken: accessToken,
       refreshToken: refreshToken,
-    }
+      refrigeratorNickname: refrigeratorNickname,
+    };
 
     // const { nickname, accessToken, refreshToken } = response.data.data;
     // setUser({ nickname, accessToken, refreshToken });
@@ -53,7 +56,7 @@ export const loginUser = async (userLoginRequest) => {
     // updateLoginUser(nickname, accessToken, refreshToken);
     // API 요청하는 콜마다 헤더에 accessToken 담아 보내도록 설정
 
-    api.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
+    //api.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
 
     return response.data;
   } catch (error) {
@@ -86,7 +89,18 @@ export const getRefrigerator = async () => {
 
 export const getRefrigeratorIngred = async (refrigeratorId) => {
   try {
-    const response = await api.get(`/refrigerator/${refrigeratorId}`);
+    console.log(refrigeratorId);
+    const user = JSON.parse(localStorage.getItem('loginUser'));
+    console.log(`user : ${user}`);
+    const response = await api.get(
+      `/refrigerator/${refrigeratorId.refrigeratorNickname}`
+      // ,
+      // {
+      //   headers: {
+      //     Authorization: `Bearer ${user.accessToken}`,
+      //   },
+      // }
+    );
     return response.data;
   } catch (error) {
     console.error('냉장고 물품 조회 실패:', error);
@@ -136,7 +150,8 @@ export const getRefrigeratorDetail = async (refrigeratorId) => {
 
 export const deleteGrocery = async (deleteRequest) => {
   try {
-    const response = await api.delete('/log', deleteRequest);
+    console.log(deleteRequest);
+    const response = await api.delete('/log', 1);
     return response.data;
   } catch (error) {
     console.error('식재료 삭제 실패', error);
@@ -146,7 +161,8 @@ export const deleteGrocery = async (deleteRequest) => {
 
 export const getGroceryDetail = async (groceryId) => {
   try {
-    const response = await api.get(`/log/${groceryId}`);
+    console.log(groceryId);
+    const response = await api.get(`/log/${JSON.parse(groceryId)}`);
     return response.data;
   } catch (error) {
     console.error('식재료 정보 얻어오기 실패:', error);
@@ -162,36 +178,39 @@ export const addGrocery = async (addRequest) => {
     console.error('식재료 정보 추가하기 실패:', error);
     throw error;
   }
-}
+};
 
 export const getAllGroceryInfo = async (pageInfo) => {
   try {
     const response = await api.get(`/ingredient/search`, pageInfo);
     return response.data;
   } catch (error) {
-    console.error("전체 식재료 정보 불러오기 실패")
+    console.error('전체 식재료 정보 불러오기 실패');
   }
-}
+};
 
 export const getTypeGroceryInfo = async (keyword, pageInfo) => {
   try {
-    const response = await api.get(`/ingredient/search/type/${keyword}`, pageInfo);
+    const response = await api.get(
+      `/ingredient/search/type/${keyword}`,
+      pageInfo
+    );
     return response.data;
   } catch (error) {
-    console.error("전체 식재료 정보 불러오기 실패")
+    console.error('전체 식재료 정보 불러오기 실패');
   }
-}
+};
 
 export const getNameGroceryInfo = async (keyword, pageInfo) => {
   try {
-    const response = await api.get(`/ingredient/search/name/${keyword}`, pageInfo);
+    const response = await api.get(
+      `/ingredient/search/name/${keyword}`,
+      pageInfo
+    );
     return response.data;
   } catch (error) {
-    console.error("전체 식재료 정보 불러오기 실패")
+    console.error('전체 식재료 정보 불러오기 실패');
   }
-}
-
-
-
+};
 
 export default api;

@@ -25,15 +25,18 @@ function FridegeInside() {
 
   const { nickname } = useRecoilValue(loginUserState);
   const { refreshToken } = useRecoilValue(loginUserState);
+  const { refrigeratorNickname } = useRecoilValue(loginUserState);
 
   const getRefrigerator = async () => {
     try {
-      const response = await getRefrigeratorIngred(nickname);
+      console.log(refrigeratorNickname);
+      const response = await getRefrigeratorIngred({ refrigeratorNickname });
       console.log('냉장고 조회 성공', response);
       console.log({ refreshToken });
     } catch (error) {
       console.log('냉장고 조회 실패', error);
-      console.log({ refreshToken });
+
+      console.log({ refrigeratorNickname });
     }
   };
 

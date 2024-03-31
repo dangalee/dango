@@ -39,18 +39,23 @@ export default function TokenRefresher() {
                 {
                   headers: {
                     Authorization: accessToken,
-                    Refresh: refreshToken,
+                    'Refresh-Token': refreshToken,
                   },
                 }
               )
               .then((res) => {
                 // console.log("res : ", res);
                 // 새 토큰 저장
-                localStorage.setItem(
-                  'Authorization',
-                  res.headers.authorization
-                );
-                localStorage.setItem('Refresh', res.headers.refresh);
+                
+                let user = JSON.parse(localStorage.getItem('loginUser'));
+                user.accessToken = res.data.data.accessToken;
+                user.refreshToken = res.data.data.refreshToken;
+                localStorage.setItem('loginUser', JSON.stringify(user));
+                // localStorage.setItem(
+                //   'Authorization',
+                //   res.data.data.accessToken
+                // );
+                // localStorage.setItem('Refresh', res.data.data.refreshToken);
 
                 // 새로 응답받은 데이터로 토큰 만료로 실패한 요청에 대한 인증 시도 (header에 토큰 담아 보낼 때 사용)
                 originalConfig.headers['authorization'] =

@@ -12,5 +12,6 @@ export const loginUserState = atom({
     nickname: loginUser ? loginUser.nickname : '', //닉네임
     accessToken: loginUser ? loginUser.accessToken : '', // accessToken
     refreshToken: loginUser ? loginUser.refreshToken : '', //refreshToken
+    refrigeratorNickname: loginUser ? loginUser.refrigeratorNickname : '',
   },
 });

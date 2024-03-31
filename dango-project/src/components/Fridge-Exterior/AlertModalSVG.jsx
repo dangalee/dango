@@ -4,21 +4,21 @@ export default function AlertModalSVG() {
   return (
     <>
       <svg
-        width='auto'
+        width='700'
         height='580'
         viewBox='0 -52 146 217'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >
         <rect
-          width='145.349'
-          height='215.509'
+          width='145'
+          height='215'
           transform='translate(0.479858 0.502869)'
           fill='url(#paint0_linear_188_447)'
         />
         <rect
-          x='11.6542'
-          y='50.0115'
+          x='11'
+          y='20'
           width='123'
           height='156'
           fill='url(#paint1_linear_188_447)'
