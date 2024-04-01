@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { loginUserState } from '../recoil/atoms/userState';
 
 const DEV = 'http://localhost:8080/api/';
 const HOST = 'https://j10a702.p.ssafy.io/api/';
@@ -36,7 +37,6 @@ api.interceptors.request.use(
 export const loginUser = async (userLoginRequest) => {
   try {
     const response = await api.post('/users/login', userLoginRequest);
-
     console.log(response);
     const nickname = response.data.data.nickname;
     const accessToken = response.data.data.accessToken;

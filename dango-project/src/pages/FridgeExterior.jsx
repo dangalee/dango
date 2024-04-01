@@ -5,9 +5,11 @@ import Footer from '../components/Footer';
 import FridgeSVG from '../components/FridgeSVG';
 import { useState } from 'react';
 import AlertModal from '../components/Fridge-Exterior/AlertModal';
-import { getRefrigerator } from '../api/Api'
+import { getRefrigerator } from '../api/Api';
 import { useEffect } from 'react';
-
+import axios from 'axios';
+import { useRecoilValue } from 'recoil';
+import { loginUserState } from '../recoil/atoms/userState';
 
 function FridgeExterior() {
   useEffect(() => {
@@ -15,29 +17,33 @@ function FridgeExterior() {
   }, []);
 
   const getRefrigeratorInfo = async () => {
-
     try {
       const response = await getRefrigerator();
-      console.log('냉장고 조회 성공', response)
-      
-      
+      console.log('냉장고 조회 성공', response);
     } catch (error) {
       console.log('냉장고 조회 실패', error);
-      
-
     }
-  }
+  };
   const navigate = useNavigate();
   const location = useLocation();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { nickname } = useRecoilValue(loginUserState);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
-
+  const [통신결과, set통신결과] = useState({});
   const goToInside = () => {
     navigate('/fridge-inside');
   };
+  useEffect(() => {
+    getSetting();
+  }, []);
 
+  const getSetting = async () => {
+    //api통신을 해
+    const res = await axios.get('/api주소');
+    set통신결과(res.data);
+  };
   const goToMypage = () => {
     navigate('/mypage');
   };
@@ -63,10 +69,10 @@ function FridgeExterior() {
 
   return (
     <>
-      <Header text={'예은이의 냉장고'} />
+      <Header text={`${nickname}의 냉장고`} />
       <div className='relative h-[590px] pt-[50px]'>
-      {/* relative h-screen */}
-      {/* absolute left-1/2 transform -translate-x-1/2 translate-y-1/2 */}
+        {/* relative h-screen */}
+        {/* absolute left-1/2 transform -translate-x-1/2 translate-y-1/2 */}
         <div className='absolute left-1/2 transform -translate-x-1/2 '>
           <FridgeSVG
             time={currentTime}
@@ -74,7 +80,11 @@ function FridgeExterior() {
             onFridgeClick={goToInside}
           />
         </div>
-        <AlertModal isOpen={isModalOpen} closeModal={closeModal} />
+        <AlertModal
+          isOpen={isModalOpen}
+          closeModal={closeModal}
+          items={통신결과}
+        />
       </div>
       <Footer />
     </>

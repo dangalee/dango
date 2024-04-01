@@ -14,7 +14,8 @@ export default function Login() {
   const [showPswd, setShowPswd] = useState(false);
 
   useEffect(() => {
-    if (localStorage.getItem('accessToken')) {
+    console.log(localStorage);
+    if (localStorage.getItem('loginUser')) {
       navigate('/fridge-exterior');
     }
   }, []);
@@ -28,10 +29,8 @@ export default function Login() {
       const response = await loginUser({ username, password });
       console.log('로그인 성공', response);
       navigate('/fridge-exterior');
-      
     } catch (error) {
       console.log('로그인 실패', error);
-      
     }
   };
 

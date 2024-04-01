@@ -1,7 +1,7 @@
 import React from 'react';
 import AlertModalSVG from './AlertModalSVG';
 import { IoClose } from 'react-icons/io5';
-export default function AlertModal({ isOpen, closeModal }) {
+export default function AlertModal({ isOpen, closeModal,items }) {
   const handleBackgroundClick = (e) => {
     // Check if the click happened outside the modal content
     if (e.target.classList.contains('modal-background')) {

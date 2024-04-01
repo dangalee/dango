@@ -40,12 +40,12 @@ export default function FridgeSVG({ time, onFridgeClick, onAlarmClick }) {
           <path
             d='M0 487.657L169.015 48.7657V487.657H0Z'
             fill='#6F7073'
-            fill-opacity='0.5'
+            fillOpacity='0.5'
           />
           <path
             d='M211.985 487.657L381 0V487.657H211.985Z'
             fill='#6F7073'
-            fill-opacity='0.5'
+            fillOpacity='0.5'
           />
           <rect
             x='34.3759'
@@ -53,7 +53,7 @@ export default function FridgeSVG({ time, onFridgeClick, onAlarmClick }) {
             width='114.586'
             height='120.48'
             fill='#58595B'
-            fill-opacity='0.75'
+            fillOpacity='0.75'
           />
           <rect
             x='48.6993'
@@ -125,7 +125,7 @@ export default function FridgeSVG({ time, onFridgeClick, onAlarmClick }) {
           />
         </Link>
         <Link onClick={handleAlarmClick}>
-           <rect
+          <rect
             width='145.349'
             height='215.509'
             transform='translate(220.48 54.5029)'
@@ -137,7 +137,7 @@ export default function FridgeSVG({ time, onFridgeClick, onAlarmClick }) {
             width='123'
             height='156'
             fill='url(#paint1_linear_188_425)'
-            fill-opacity='0.13'
+            fillOpacity='0.13'
           />
         </Link>
         {/* <path
@@ -157,9 +157,9 @@ export default function FridgeSVG({ time, onFridgeClick, onAlarmClick }) {
             y2='215.509'
             gradientUnits='userSpaceOnUse'
           >
-            <stop stop-color='#6CC8C6' />
-            <stop offset='0.5' stop-color='#6CC8C6' />
-            <stop offset='1' stop-color='#6840C0' />
+            <stop stopColor='#6CC8C6' />
+            <stop offset='0.5' stopColor='#6CC8C6' />
+            <stop offset='1' stopColor='#6840C0' />
           </linearGradient>
           <linearGradient
             id='paint1_linear_188_425'
@@ -169,9 +169,9 @@ export default function FridgeSVG({ time, onFridgeClick, onAlarmClick }) {
             y2='260.011'
             gradientUnits='userSpaceOnUse'
           >
-            <stop stop-color='#FFFBFB' />
-            <stop offset='0.46' stop-color='#6CC8C6' />
-            <stop offset='1' stop-color='#453F3F' />
+            <stop stopColor='#FFFBFB' />
+            <stop offset='0.46' stopColor='#6CC8C6' />
+            <stop offset='1' stopColor='#453F3F' />
           </linearGradient>
         </defs>
       </svg>

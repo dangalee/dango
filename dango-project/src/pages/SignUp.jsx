@@ -17,7 +17,7 @@ export default function SignUp() {
     try {
       const response = await signUpUser({ nickname, username, password });
       console.log('로그인 성공', response);
-      navigateConnectFridge();
+      navigateLogin();
     } catch (error) {
       console.log('로그인 실패', error);
     }
@@ -26,9 +26,9 @@ export default function SignUp() {
   const navigateLogin = () => {
     navigate('/');
   };
-  const navigateConnectFridge = () => {
-    navigate('/connect-fridge');
-  };
+  // const navigateConnectFridge = () => {
+  //   navigate('/connect-fridge');
+  // };
   return (
     <>
       <div className='flex justify-center items-center h-[100vh] landing-background'>
