@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import FridgeSVG from '../components/FridgeSVG';
 import { useState } from 'react';
 import AlertModal from '../components/Fridge-Exterior/AlertModal';
-import { getRefrigerator } from '../api/Api';
+import { getRefrigerator, getRefrigeratorOld } from '../api/Api';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { useRecoilValue } from 'recoil';
@@ -15,10 +15,11 @@ function FridgeExterior() {
   useEffect(() => {
     getRefrigeratorInfo();
   }, []);
+  const { nickname, refrigeratorNickname } = useRecoilValue(loginUserState);
 
   const getRefrigeratorInfo = async () => {
     try {
-      const response = await getRefrigerator();
+      const response = await getRefrigeratorOld({ refrigeratorNickname });
       console.log('냉장고 조회 성공', response);
     } catch (error) {
       console.log('냉장고 조회 실패', error);
@@ -27,7 +28,6 @@ function FridgeExterior() {
   const navigate = useNavigate();
   const location = useLocation();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { nickname } = useRecoilValue(loginUserState);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);

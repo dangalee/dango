@@ -22,7 +22,7 @@ export default function AlertModalSVG() {
           width='123'
           height='156'
           fill='url(#paint1_linear_188_447)'
-          fill-opacity='0.13'
+          fillOpacity='0.13'
         />
         <defs>
           <linearGradient
@@ -33,9 +33,9 @@ export default function AlertModalSVG() {
             y2='215.509'
             gradientUnits='userSpaceOnUse'
           >
-            <stop stop-color='#6CC8C6' />
-            <stop offset='0.5' stop-color='#6CC8C6' />
-            <stop offset='1' stop-color='#6840C0' />
+            <stop stopColor='#6CC8C6' />
+            <stop offset='0.5' stopColor='#6CC8C6' />
+            <stop offset='1' stopColor='#6840C0' />
           </linearGradient>
           <linearGradient
             id='paint1_linear_188_447'

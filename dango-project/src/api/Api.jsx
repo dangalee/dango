@@ -148,6 +148,20 @@ export const getRefrigeratorDetail = async (refrigeratorId) => {
   }
 };
 
+export const getRefrigeratorOld = async (refrigeratorNickname) => {
+  try {
+    const user = JSON.parse(localStorage.getItem('loginUser'));
+
+    const response = await api.get(
+      `/refrigerator/old/${refrigeratorNickname.refrigeratorNickname}`
+    );
+    return response.data;
+  } catch (error) {
+    console.error('냉장고 오래된 품목 얻어오기 실패:', error);
+    throw error;
+  }
+};
+
 export const deleteGrocery = async (deleteRequest) => {
   try {
     console.log(deleteRequest);
