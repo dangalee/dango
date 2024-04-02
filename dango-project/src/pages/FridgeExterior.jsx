@@ -10,12 +10,11 @@ import { useEffect } from 'react';
 import { useRecoilValue } from 'recoil';
 import { loginUserState, userState } from '../recoil/atoms/userState';
 import AlertButton from '../components/Fridge-Exterior/AlertButton';
-import { refrigeratorAPI } from '../api/refrigeratorAPI';
+
 
 function FridgeExterior() {
   useEffect(() => {
     getRefrigeratorInfo();
-    getRefrigeratorOpen();
   }, []);
   const loginUser = useRecoilValue(loginUserState);
   
@@ -33,21 +32,12 @@ function FridgeExterior() {
     }
   };
 
-  const getRefrigeratorOpen = async() => {
-    try{
-      const response = await refrigeratorAPI.isDoorOpen();
-      const isOpen = response.data.data;
-      setIsRefrigeratorOpen(isOpen);
-    }catch(error){
-      console.log('냉장고 조회 실패', error);
-    }
-  }
+  
 
   
   const navigate = useNavigate();
   const location = useLocation();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isRefrigeratorOpen,setIsRefrigeratorOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -88,7 +78,7 @@ function FridgeExterior() {
         {/* absolute left-1/2 transform -translate-x-1/2 translate-y-1/2 */}
         <div className='absolute left-1/2 transform -translate-x-1/2 '>
         <div>
-        <AlertButton isOpen = {isRefrigeratorOpen}/>
+        <AlertButton/>
         </div>
          <div>
          <FridgeSVG
