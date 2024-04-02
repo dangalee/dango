@@ -13,6 +13,7 @@ export const loginUserState = atom({
     refrigeratorNickname: loginUser ? loginUser.refrigeratorNickname : '', //냉장고 닉네임
     accessToken: loginUser ? loginUser.accessToken : '', // AccessToken 조회
     refreshToken: loginUser ? loginUser.refreshToken : '', // RefreshToken 조회
+    email: loginUser ? loginUser.email : '', // email 조회
   },
 });
 
